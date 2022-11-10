@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using OpenQA.Selenium;
 
-namespace AskOmDchFramework9Nov1.Test.Testcases
+namespace AskOmDchFramework9Nov1.Test.Pages
 {
     
     public class StorePage : Base.BasePage

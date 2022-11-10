@@ -18,15 +18,21 @@ namespace AskOmDchFramework9Nov1.Test.Base
         [TestInitialize]
         public void setUp()
         {
-            driver = new ChromeDriver();
-            jse = (IJavaScriptExecutor)driver;
-            driver.Manage().Window.Maximize();
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
+            if (driver == null)
+            {
+                driver = new ChromeDriver();
+                jse = (IJavaScriptExecutor)driver;
+                driver.Manage().Window.Maximize();
+                driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
+            }
         }
 
         public void tearDown()
         {
-            driver.Quit();  
+            if (driver != null)
+            {
+                driver.Quit();
+            }
         }
     }
 }

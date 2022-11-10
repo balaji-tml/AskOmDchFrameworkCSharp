@@ -29,7 +29,22 @@ namespace AskOmDchFramework9Nov1.Test.Testcases
             storePage.clickOnAddToCartButtonForBlueShoes();
             //driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
             Thread.Sleep(5000);
-            storePage.clickOnViewShoppingCartButton();  
+            storePage.clickOnViewShoppingCartButton();
+            CartPage cartPage = new CartPage(driver);
+            cartPage.clickOnProceedToCheckoutButton();
+            CheckoutPage checkoutPage = new CheckoutPage(driver);
+            checkoutPage.enterFirstName("FirstName");
+            checkoutPage.enterLastName("LastName");
+            checkoutPage.enterCompanyName("CompanyName");
+            checkoutPage.enterBillingAddress("123,BTM Layout");
+            checkoutPage.enterBillingCity("Beverly Hills");
+            checkoutPage.enterBillingPostcode("90210");
+            checkoutPage.enterPhone("9898980980");
+            checkoutPage.enterEmail("FirstName.LastName@email.com");
+            checkoutPage.clickOnPlaceOrderButton();
+
+            
+
 
         }
 

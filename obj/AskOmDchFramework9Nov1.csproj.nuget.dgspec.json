@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Frameworks\\AskOmDchFramework9Nov1\\AskOmDchFramework9Nov1.csproj": {}
+    "D:\\Frameworks\\Dt11Nov2022\\AskOmDchFrameworkCSharp\\AskOmDchFramework9Nov1.csproj": {}
   },
   "projects": {
-    "D:\\Frameworks\\AskOmDchFramework9Nov1\\AskOmDchFramework9Nov1.csproj": {
+    "D:\\Frameworks\\Dt11Nov2022\\AskOmDchFrameworkCSharp\\AskOmDchFramework9Nov1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Frameworks\\AskOmDchFramework9Nov1\\AskOmDchFramework9Nov1.csproj",
+        "projectUniqueName": "D:\\Frameworks\\Dt11Nov2022\\AskOmDchFrameworkCSharp\\AskOmDchFramework9Nov1.csproj",
         "projectName": "AskOmDchFramework9Nov1",
-        "projectPath": "D:\\Frameworks\\AskOmDchFramework9Nov1\\AskOmDchFramework9Nov1.csproj",
+        "projectPath": "D:\\Frameworks\\Dt11Nov2022\\AskOmDchFrameworkCSharp\\AskOmDchFramework9Nov1.csproj",
         "packagesPath": "C:\\Users\\Pbala\\.nuget\\packages\\",
-        "outputPath": "D:\\Frameworks\\AskOmDchFramework9Nov1\\obj\\",
+        "outputPath": "D:\\Frameworks\\Dt11Nov2022\\AskOmDchFrameworkCSharp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

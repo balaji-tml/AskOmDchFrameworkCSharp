@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "k5v0K8EVXgswYTvkxl7SKHBhCJzcJpCUuRgP+k7jCXl3N0gzmgPsaL6fr2U8zNE/gZZURFs4X5TRAe3WK8Qxew==",
+  "dgSpecHash": "A4J884Byy8Lf+cJIsBN5ABK3oQ6ClYXMv82yYYOTt19LUmJyNWKKewEGSVUNtctopvpCkNWbnt6TyiElyE6A5A==",
   "success": true,
-  "projectFilePath": "D:\\Frameworks\\AskOmDchFramework9Nov1\\AskOmDchFramework9Nov1.csproj",
+  "projectFilePath": "D:\\Frameworks\\Dt11Nov2022\\AskOmDchFrameworkCSharp\\AskOmDchFramework9Nov1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Pbala\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
     "C:\\Users\\Pbala\\.nuget\\packages\\microsoft.codecoverage\\17.1.0\\microsoft.codecoverage.17.1.0.nupkg.sha512",
