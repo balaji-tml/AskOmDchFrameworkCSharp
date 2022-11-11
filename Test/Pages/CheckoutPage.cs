@@ -24,47 +24,47 @@ namespace AskOmDchFramework9Nov1.Test.Pages
         private By placeOrderBTN = By.XPath("//button[contains(text(),'Place order')]");
         
 
-        public void enterFirstName(string firstName)
+        public void EnterFirstName(string firstName)
         {
             driver.FindElement(firstNameTXT).SendKeys(firstName);
         }
 
-        public void enterLastName(string lastName)
+        public void EnterLastName(string lastName)
         {
             driver.FindElement(lastNameTXT).SendKeys(lastName);
         }
 
-        public void enterCompanyName(string companyName)
+        public void EnterCompanyName(string companyName)
         {
             driver.FindElement(companyNameTXT).SendKeys(companyName);
         }
 
-        public void enterBillingAddress(string billingAddress)
+        public void EnterBillingAddress(string billingAddress)
         {
             driver.FindElement(billingAddressTXT).SendKeys(billingAddress);
         }
 
-        public void enterBillingCity(string billingCity)
+        public void EnterBillingCity(string billingCity)
         {
             driver.FindElement(cityTXT).SendKeys(billingCity);
         }
 
-        public void enterBillingPostcode(string postcode)
+        public void EnterBillingPostcode(string postcode)
         {
             driver.FindElement(postcodeTXT).SendKeys(postcode);
         }
 
-        public void enterPhone(string phone)
+        public void EnterPhone(string phone)
         {
             driver.FindElement(phoneTXT).SendKeys(phone);
         }
 
-        public void enterEmail(string email)
+        public void EnterEmail(string email)
         {
             driver.FindElement(emailTXT).SendKeys(email);
         }
 
-        public void clickOnPlaceOrderButton()
+        public void ClickOnPlaceOrderButton()
         {
             driver.FindElement(placeOrderBTN).Click();
         }

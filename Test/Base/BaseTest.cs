@@ -16,7 +16,7 @@ namespace AskOmDchFramework9Nov1.Test.Base
         protected IJavaScriptExecutor? jse;
 
         [TestInitialize]
-        public void setUp()
+        public void SetUp()
         {
             if (driver == null)
             {
@@ -27,7 +27,7 @@ namespace AskOmDchFramework9Nov1.Test.Base
             }
         }
 
-        public void tearDown()
+        public void TearDown()
         {
             if (driver != null)
             {

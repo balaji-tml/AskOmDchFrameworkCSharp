@@ -22,22 +22,22 @@ namespace AskOmDchFramework9Nov1.Test.Pages
 
         By ViewShoppingCartBtn = By.XPath("//*[@id=\"ast-site-header-cart\"]/div[1]/a/div/span");
 
-        public void enterValueForSearchProductField(string productName)
+        public void EnterValueForSearchProductField(string productName)
         {
             driver.FindElement(searchProdTXT).SendKeys(productName);
         }
 
-        public void clickOnSearchProductButton()
+        public void ClickOnSearchProductButton()
         {
             driver.FindElement(searchProdBTN).Click();  
         }
 
-        public void clickOnAddToCartButtonForBlueShoes()
+        public void ClickOnAddToCartButtonForBlueShoes()
         {
             driver.FindElement(addToCartBtn).Click();
         }
 
-        public void clickOnViewShoppingCartButton()
+        public void ClickOnViewShoppingCartButton()
         {
             driver.FindElement(ViewShoppingCartBtn).Click();
             //IJavaScriptExecutor jse = (IJavaScriptExecutor)driver;

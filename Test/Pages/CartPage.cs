@@ -16,7 +16,7 @@ namespace AskOmDchFramework9Nov1.Test.Pages
         private By proceedToCheckoutBTN = By.XPath("//a[contains(text(),'Proceed to checkout')]");
 
 
-        public void clickOnProceedToCheckoutButton()
+        public void ClickOnProceedToCheckoutButton()
         {
             driver.FindElement(proceedToCheckoutBTN).Click();
         }

@@ -22,26 +22,27 @@ namespace AskOmDchFramework9Nov1.Test.Testcases
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
             driver.Navigate().GoToUrl("https://askomdch.com/");
             LandingPage landingPage = new LandingPage(driver);
-            landingPage.clickOnStoreLink();
+            landingPage.ClickOnStoreLink();
             StorePage storePage = new StorePage(driver);
-            storePage.enterValueForSearchProductField("blue");
-            storePage.clickOnSearchProductButton();
-            storePage.clickOnAddToCartButtonForBlueShoes();
+            storePage.EnterValueForSearchProductField("blue");
+            storePage.ClickOnSearchProductButton();
+            storePage.ClickOnAddToCartButtonForBlueShoes();
             //driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
             Thread.Sleep(5000);
-            storePage.clickOnViewShoppingCartButton();
+            storePage.ClickOnViewShoppingCartButton();
             CartPage cartPage = new CartPage(driver);
-            cartPage.clickOnProceedToCheckoutButton();
+            cartPage.ClickOnProceedToCheckoutButton();
             CheckoutPage checkoutPage = new CheckoutPage(driver);
-            checkoutPage.enterFirstName("FirstName");
-            checkoutPage.enterLastName("LastName");
-            checkoutPage.enterCompanyName("CompanyName");
-            checkoutPage.enterBillingAddress("123,BTM Layout");
-            checkoutPage.enterBillingCity("Beverly Hills");
-            checkoutPage.enterBillingPostcode("90210");
-            checkoutPage.enterPhone("9898980980");
-            checkoutPage.enterEmail("FirstName.LastName@email.com");
-            checkoutPage.clickOnPlaceOrderButton();
+            checkoutPage.EnterFirstName("FirstName");
+            checkoutPage.EnterLastName("LastName");
+            checkoutPage.EnterCompanyName("CompanyName");
+            checkoutPage.EnterBillingAddress("123,BTM Layout");
+            checkoutPage.EnterBillingCity("Beverly Hills");
+            checkoutPage.EnterBillingPostcode("90210");
+            checkoutPage.EnterPhone("9898980980");
+            checkoutPage.EnterEmail("FirstName.LastName@email.com");
+            Thread.Sleep(5000);
+            checkoutPage.ClickOnPlaceOrderButton();
 
             
 

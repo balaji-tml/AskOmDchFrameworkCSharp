@@ -16,7 +16,7 @@ namespace AskOmDchFramework9Nov1.Test.Pages
 
         private By storeLINK = By.CssSelector("#menu-item-1227 > a");
 
-        public void clickOnStoreLink()
+        public void ClickOnStoreLink()
         {
             driver.FindElement(storeLINK).Click();  
         }
