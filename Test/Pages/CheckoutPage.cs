@@ -22,6 +22,7 @@ namespace AskOmDchFramework9Nov1.Test.Pages
         private By phoneTXT = By.Id("billing_phone");
         private By emailTXT = By.Id("billing_email");
         private By placeOrderBTN = By.XPath("//button[contains(text(),'Place order')]");
+        private By confirmMSG = By.XPath("//p[contains(text(),'Thank you. Your order has been received.')]");
         
 
         public void EnterFirstName(string firstName)
@@ -67,6 +68,11 @@ namespace AskOmDchFramework9Nov1.Test.Pages
         public void ClickOnPlaceOrderButton()
         {
             driver.FindElement(placeOrderBTN).Click();
+        }
+
+        public string getConfirmMessage()
+        {
+            return driver.FindElement(confirmMSG).Text;
         }
 
     }
