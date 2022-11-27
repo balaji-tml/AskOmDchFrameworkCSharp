@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AskOmDchFramework9Nov1.Test.Pages
 {
-    internal class CartPage : Base.BasePage
+    public class CartPage : Base.BasePage
     {
         public CartPage(IWebDriver driver) : base(driver)
         {
@@ -16,9 +16,10 @@ namespace AskOmDchFramework9Nov1.Test.Pages
         private By proceedToCheckoutBTN = By.XPath("//a[contains(text(),'Proceed to checkout')]");
 
 
-        public void ClickOnProceedToCheckoutButton()
+        public CheckoutPage ClickOnProceedToCheckoutButton()
         {
             driver.FindElement(proceedToCheckoutBTN).Click();
+            return new CheckoutPage(driver);
         }
     }
 }

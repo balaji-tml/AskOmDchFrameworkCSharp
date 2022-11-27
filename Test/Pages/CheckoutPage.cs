@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AskOmDchFramework9Nov1.Test.Pages
 {
-    internal class CheckoutPage : Base.BasePage
+    public class CheckoutPage : Base.BasePage
     {
         public CheckoutPage(IWebDriver driver) : base(driver)
         {
@@ -22,7 +22,7 @@ namespace AskOmDchFramework9Nov1.Test.Pages
         private By phoneTXT = By.Id("billing_phone");
         private By emailTXT = By.Id("billing_email");
         private By placeOrderBTN = By.XPath("//button[contains(text(),'Place order')]");
-        private By confirmMSG = By.XPath("//p[contains(text(),'Thank you. Your order has been received.')]");
+        //private By confirmMSG = By.XPath("//p[contains(text(),'Thank you. Your order has been received.')]");
         
 
         public void EnterFirstName(string firstName)
@@ -65,15 +65,16 @@ namespace AskOmDchFramework9Nov1.Test.Pages
             driver.FindElement(emailTXT).SendKeys(email);
         }
 
-        public void ClickOnPlaceOrderButton()
+        public OrderConfirmationPage ClickOnPlaceOrderButton()
         {
             driver.FindElement(placeOrderBTN).Click();
+            return new OrderConfirmationPage(driver);
         }
 
-        public string getConfirmMessage()
-        {
-            return driver.FindElement(confirmMSG).Text;
-        }
+        //public string getConfirmMessage()
+        //{
+        //    return driver.FindElement(confirmMSG).Text;
+        //}
 
     }
 

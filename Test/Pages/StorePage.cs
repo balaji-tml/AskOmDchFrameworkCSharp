@@ -37,9 +37,10 @@ namespace AskOmDchFramework9Nov1.Test.Pages
             driver.FindElement(addToCartBtn).Click();
         }
 
-        public void ClickOnViewShoppingCartButton()
+        public CartPage ClickOnViewShoppingCartButton()
         {
             driver.FindElement(ViewShoppingCartBtn).Click();
+            return new CartPage(driver);
             //IJavaScriptExecutor jse = (IJavaScriptExecutor)driver;
             //IWebElement elm = (IWebElement)jse.ExecuteScript("return document.querySelector(\"#ast-site-header-cart > div.ast-site-header-cart-li > a > div > span\")");
             //elm.Click();

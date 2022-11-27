@@ -24,17 +24,17 @@ namespace AskOmDchFramework9Nov1.Test.Testcases
             //driver.Navigate().GoToUrl("https://askomdch.com/");
             driver.Url = "https://askomdch.com/";
             LandingPage landingPage = new LandingPage(driver);
-            landingPage.ClickOnStoreLink();
-            StorePage storePage = new StorePage(driver);
+            StorePage storePage = landingPage.ClickOnStoreLink();
+            //StorePage storePage = new StorePage(driver);
             storePage.EnterValueForSearchProductField("blue");
             storePage.ClickOnSearchProductButton();
             storePage.ClickOnAddToCartButtonForBlueShoes();
             //driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
             Thread.Sleep(5000);
-            storePage.ClickOnViewShoppingCartButton();
-            CartPage cartPage = new CartPage(driver);
-            cartPage.ClickOnProceedToCheckoutButton();
-            CheckoutPage checkoutPage = new CheckoutPage(driver);
+            CartPage cartPage = storePage.ClickOnViewShoppingCartButton();
+            //CartPage cartPage = new CartPage(driver);
+            CheckoutPage checkoutPage = cartPage.ClickOnProceedToCheckoutButton();
+            //CheckoutPage checkoutPage = new CheckoutPage(driver);
             checkoutPage.EnterFirstName("FirstName");
             checkoutPage.EnterLastName("LastName");
             checkoutPage.EnterCompanyName("CompanyName");
@@ -44,10 +44,10 @@ namespace AskOmDchFramework9Nov1.Test.Testcases
             checkoutPage.EnterPhone("9898980980");
             checkoutPage.EnterEmail("FirstName.LastName@email.com");
             Thread.Sleep(5000);
-            checkoutPage.ClickOnPlaceOrderButton();
+            OrderConfirmationPage orderConfirmationPage =  checkoutPage.ClickOnPlaceOrderButton();
             Thread.Sleep(5000);
-            Console.WriteLine("Confirmation message is: "+ checkoutPage.getConfirmMessage());
-            Assert.AreEqual("Thank you. Your order has been received.",checkoutPage.getConfirmMessage());
+            Console.WriteLine("Confirmation message is: "+ orderConfirmationPage.getConfirmMessage());
+            Assert.AreEqual("Thank you. Your order has been received.", orderConfirmationPage.getConfirmMessage());
 
 
         }
@@ -60,17 +60,17 @@ namespace AskOmDchFramework9Nov1.Test.Testcases
             //driver.Navigate().GoToUrl("https://askomdch.com/");
             driver.Url = "https://askomdch.com/";
             LandingPage landingPage = new LandingPage(driver);
-            landingPage.ClickOnStoreLink();
-            StorePage storePage = new StorePage(driver);
+            StorePage storePage = landingPage.ClickOnStoreLink();
+            //StorePage storePage = new StorePage(driver);
             storePage.EnterValueForSearchProductField("blue");
             storePage.ClickOnSearchProductButton();
             storePage.ClickOnAddToCartButtonForBlueShoes();
             //driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
             Thread.Sleep(5000);
-            storePage.ClickOnViewShoppingCartButton();
-            CartPage cartPage = new CartPage(driver);
-            cartPage.ClickOnProceedToCheckoutButton();
-            CheckoutPage checkoutPage = new CheckoutPage(driver);
+            CartPage cartPage = storePage.ClickOnViewShoppingCartButton();
+            //CartPage cartPage = new CartPage(driver);
+            CheckoutPage checkoutPage =  cartPage.ClickOnProceedToCheckoutButton();
+            //CheckoutPage checkoutPage = new CheckoutPage(driver);
             checkoutPage.EnterFirstName("FirstName");
             checkoutPage.EnterLastName("LastName");
             checkoutPage.EnterCompanyName("CompanyName");
@@ -80,10 +80,10 @@ namespace AskOmDchFramework9Nov1.Test.Testcases
             checkoutPage.EnterPhone("9898980980");
             checkoutPage.EnterEmail("FirstName.LastName@email.com");
             Thread.Sleep(5000);
-            checkoutPage.ClickOnPlaceOrderButton();
+            OrderConfirmationPage orderConfirmationPage = checkoutPage.ClickOnPlaceOrderButton();
             Thread.Sleep(5000);
-            //Console.WriteLine("Confirmation message is: " + checkoutPage.getConfirmMessage());
-            Assert.AreEqual("Thank you. Your order has been received.", checkoutPage.getConfirmMessage());
+            Console.WriteLine("Confirmation message is: " + orderConfirmationPage.getConfirmMessage());
+            Assert.AreEqual("Thank you. Your order has been received.", orderConfirmationPage.getConfirmMessage());
         }
 
     }
